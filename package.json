@@ -67,5 +67,9 @@
     "includedScripts": [
       "_fetch-notion-blocks"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/yamataro-46/astro-notion-blog.git",
+  "author": "ymd_a^3 <81146224+yamataro-46@users.noreply.github.com>",
+  "license": "MIT"
 }
