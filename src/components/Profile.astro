@@ -1,0 +1,66 @@
+---
+export interface Props {
+  heading: string
+}
+
+const { heading } = Astro.props
+---
+
+<div class="profile">
+    <h3>{heading}</h3>
+    <p style="text-align: left"><b><font size="5">ymd_py</font></b><br>SE 0年目. Notion大好きマン. </p>
+    <p style="text-align: right">
+      <a href="https://twitter.com/ymd_a3_notion"><img src="/tw_icon.jpg"width="25" height="25" alt="Twitter"></a>
+      &nbsp;
+      <a href="https://github.com/yamataro-46"><img src="/github-icon.svg"width="25" height="25" alt="GitHub"></a>
+      &nbsp;
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSda2h2kX8rn3_RmM3ii_aJlHLCx_QigRvr4uVzu0vN86CYjSw/viewform"><img src="/mail-icon.png"width="25" height="25" alt="お問い合わせ"></a>
+    </p>
+    <p style="text-align: center">----------------------------------------------</p>
+    <!-- <p>
+        <a class="twitter-timeline" data-height="250" href="https://twitter.com/ymd_a3_notion?ref_src=twsrc%5Etfw">Tweets by ymd_a3_notion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p> -->
+</div>
+
+<style>
+  .profile {
+  }
+  .profile h3 {
+    margin: 0;
+    padding-left: 0.4rem;
+    color: #777;
+    font-size: 0.95rem;
+  }
+  .profile ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.4rem;
+    margin-block-end: 1rem;
+  }
+  .profile ul li {
+  }
+  .profile ul li a {
+    display: block;
+    border-radius: var(--radius);
+    padding: 0.4rem 0.4rem;
+    line-height: 1.2rem;
+    color: inherit;
+    font-size: 0.95rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .profile ul li a:hover {
+    background-color: #ddd;
+  }
+  .profile ul li a span,
+  .profile ul li a img {
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+  .profile ul li a img {
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: sub;
+  }
+</style>
