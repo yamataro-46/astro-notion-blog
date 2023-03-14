@@ -102,9 +102,12 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
 >
   <div slot="main" class={styles.main}>
     <div class={styles.post}>
-      <PostDate post={post} />
-      <PostTags post={post} />
       <PostTitle post={post} enableLink={false} />
+      <span class="property" style="display: flex;">
+        <PostDate post={post} />
+        &nbsp;&nbsp;
+        <PostTags post={post} />
+      </span>
       <PostBody blocks={blocks} />
       <PostTags post={post} />
 
@@ -127,3 +130,6 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
     <BlogTagsLink heading="カテゴリ" tags={tags} />
   </div>
 </Layout>
+
+
+
