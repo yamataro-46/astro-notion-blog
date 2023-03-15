@@ -116,7 +116,7 @@ export async function getPosts(pageSize = 10): Promise<Post[]> {
   return allPosts.slice(0, pageSize)
 }
 
-export async function getRankedPosts(pageSize = 10): Promise<Post[]> {
+export async function getRankedPosts(pageSize = 5): Promise<Post[]> {
   const allPosts = await getAllPosts()
   return allPosts
     .filter((post) => !!post.Rank)
