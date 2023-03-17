@@ -43,7 +43,8 @@ if (database.Icon && database.Icon.Type === 'file') {
   }
 }
 
-const asidePaddingTop = coverImageURL ? '200px' : '60px'
+// const asidePaddingTop = coverImageURL ? '200px' : '60px'
+const asidePaddingTop = '20px'
 ---
 
 <!DOCTYPE html>
@@ -162,7 +163,7 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
           <a class="twitter-timeline" data-height="300" href="https://twitter.com/ymd_a3_notion?ref_src=twsrc%5Etfw">Tweets by ymd_a3_notion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </span> -->
         <!-- <p style="position: absolute; bottom: 0;"> -->
-        <a class="twitter-timeline" data-height="500" data-width="260" href="https://twitter.com/ymd_a3_notion?ref_src=twsrc%5Etfw">Tweets by ymd_a3_notion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-height="300" href="https://twitter.com/ymd_a3_notion?ref_src=twsrc%5Etfw">Tweets by ymd_a3_notion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- </p> -->
         </aside>
     </div>
@@ -223,7 +224,7 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
   aside {
     order: 1;
     width: 300px;
-    padding: 20px 20px 20px;
+    padding: var(--asidePaddingTop) 20px 20px;
     color: MenuText;
     background-color: Menu;
   }
@@ -323,8 +324,8 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
     --gap: 1rem;
     --gap-double: 2rem;
 
-    --bg: #F8F8FF;
-    /* --bg: #F5F5F5; */
+    /* --bg: #F8F8FF; */
+    --bg: #F5F5F5;
     --fg: #333;
     --accents-1: #0077ff;
     --accents-2: #f6f6db;
@@ -376,11 +377,11 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
   }
 
   
-  /* aside {
+  aside {
     position: sticky;
     top: 0rem;
     height: 100vh;
-  } */
+  }
 
   figure {
     margin: 0;
