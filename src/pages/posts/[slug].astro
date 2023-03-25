@@ -92,6 +92,15 @@ let ogImage = ''
 if (post.FeaturedImage && post.FeaturedImage.Url) {
   ogImage = new URL(filePath(new URL(post.FeaturedImage.Url)), Astro.site)
 }
+
+// 記事の公開時期が2年以上前のとき、記事の頭にアラートを出す
+import dayjs from "dayjs"
+let dayAlert = ''
+let nowdate = new Date()
+const postdate = dayjs(PostDate(post.Date)).format('YYYY-MM-DD')
+if (dayjs(postdate).diff(dayjs(), 'year') < -1) {
+  dayAlert = 'この記事は最終更新日から1年以上が経過しています。'
+}
 ---
 
 <Layout
@@ -108,6 +117,10 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
         &nbsp;&nbsp;
         <PostTags post={post} />
       </span>
+      <p className="text-pink-700 dark:text-pink-600">
+        <span className="font-semibold">⚠ </span>
+        dayAlert
+      </p>
       <PostBody blocks={blocks} />
       <PostTags post={post} />
 
