@@ -86,6 +86,7 @@ const asidePaddingTop = '20px'
   <body>
     <GoogleAnalytics trackingId={PUBLIC_GA_TRACKING_ID} />
     <div class="container">
+      
       <main>
         {
           coverImageURL && (
@@ -144,9 +145,9 @@ const asidePaddingTop = '20px'
         </div>
       </main>
 
-      <!-- <aside-n>
+      <aside-n>
 
-      </aside-n> -->
+      </aside-n>
       <aside>
         <slot name="aside" />
         <!-- <br>
@@ -171,6 +172,7 @@ const asidePaddingTop = '20px'
         
         <!-- </p> -->
         </aside>
+        
     </div>
 
     {
@@ -219,16 +221,17 @@ const asidePaddingTop = '20px'
     }
   }
 
-  /* aside-n {
-    order: 1;
-    width: 200px;
+  aside-n {
+    order: 2;
+    width: 400px;
     padding: 20px 20px 20px;
-    color: #F8F8FF;
-  } */
+    color: white;
+    background-color: #faf0e6;
+  }
 
   aside {
     order: 1;
-    width: 300px;
+    width: 400px;
     padding: var(--asidePaddingTop) 20px 20px;
     color: black;
     background-color: #faf0e6;
